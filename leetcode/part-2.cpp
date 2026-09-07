@@ -23,9 +23,12 @@ Set nums2[1] = nums1[1] - nums1[0] = 4 - 1 = 3.
 Set nums2[2] = nums1[2] = 7.
 nums2 = [1, 3, 7], and all elements are odd. Thus, the answer is true.
 */
+#include<iostream>
+#include<vector>
+using namespace std;
 class Solution {
 public:
-    bool uniformArray(vector<int>& nums1) {
+    bool uniformArray(vector <int>& nums1) {
         int n = nums1.size();
         int min_odd = 1e9 + 7;
         for (int i : nums1) if (i & 1) min_odd = min(min_odd, i);
